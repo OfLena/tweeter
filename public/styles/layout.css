@@ -29,17 +29,13 @@ body {
   width: 100%;
   flex-direction: column;
 }
-
-main {
-  
-  align-self: center;
-  
+.container-main {
+  display: flex;
+  background-color: whitesmoke;
+ align-self: center;
+  padding-bottom: 1.5em;
   width: 90%;
-  background-color: #f4f1ec;
-  
-  
-  
-
+  flex-direction: column;
 }
 
 .tweet-underline {
@@ -49,6 +45,17 @@ main {
 .main-undertweet {
   display: flex;
   justify-content: space-between;
+}
+
+.tweet-container {
+  display: flex;
+
+}
+
+article .single-tweet {
+  margin-top: 5px;
+  border: 3px solid black;
+  display: flex;
 }
 
 
