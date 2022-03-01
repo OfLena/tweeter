@@ -21,9 +21,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
-  
-  
-  
+}
+
+.nav-header-container {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  flex-direction: column;
 }
 
 main {
