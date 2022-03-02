@@ -27,13 +27,35 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+//////////////***********GET COUNTER VARIABLE***************//////////////
+
+// $("#tweet-text").on('input', function() {
+//   const counter = $(this).parents(".new-tweet").find(".tweet-text-counter");
+// })
+
+
+
+
 //////////////***********RENDER TWEETS IN THE DOM***********///////////////
 
 $(document).ready(function() {
 
+
+
   const $form = $("#new-tweet");
   $form.on("submit", (event) => {
     event.preventDefault();
+    const counter = $("textarea").val().length
+    console.log(counter)
+    
+    if (counter > 140) {
+      event.preventDefault;
+      return alert("That is WAYYY Too Many Characters!")
+    } else if (counter === 0) {
+      event.preventDefault;
+      return alert ("Cat got your tongue?")
+    }
+ 
     //console.log to make sure that the submit button is being diverted.
     console.log("The Form was submitted");
     const serializedData = $(event.target).serialize();
