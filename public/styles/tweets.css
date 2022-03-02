@@ -1,6 +1,7 @@
 .all-tweets {
   display: flex;
   flex-direction: column;
+  
 }
 
 .single-tweet:hover {
@@ -8,6 +9,7 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+  
 }
 
 article.single-tweet > header {
@@ -29,7 +31,11 @@ article.single-tweet > header {
   margin-top: 50px;
   margin-bottom: 0px;
   justify-content: center;
-  
+}
+
+.single-tweet {
+  border: 2px solid black;
+  margin-top: 5px;
 }
 
 .fa-solid,.fa-user-astronaut {
@@ -46,6 +52,7 @@ flex-direction: row;
 align-items: center;
 padding-left: 10px;
 padding-right: 10px;
+
 }
 
 .footer-text {
