@@ -23,7 +23,6 @@ article.single-tweet > header {
 }
 
 .posted-tweet {
-  
   border-bottom: 4px solid black;
   margin-left: 10px;
   margin-right: 10px;
@@ -54,7 +53,7 @@ padding-right: 10px;
 }
 
 .fa-solid {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .fa-flag:hover,.fa-retweet:hover,.fa-heart:hover {
@@ -63,6 +62,10 @@ padding-right: 10px;
   filter: alpha(opacity=30);
 }
 
-
-
+.name-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
 
