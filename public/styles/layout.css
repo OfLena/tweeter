@@ -32,10 +32,12 @@ body {
 .container-main {
   display: flex;
   background-color: whitesmoke;
- align-self: center;
+  align-self: center;
   padding-bottom: 1.5em;
   width: 90%;
   flex-direction: column;
+  padding-top: 20px;
+
 }
 
 .tweet-underline {
@@ -46,6 +48,35 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+
+/* @media only screen and (max-width: 1023px) and (min-width: 768px) {
+
+} */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+  }
+
+  .container-main {
+    width: 60%;
+    padding-top: 150px;
+    padding-left: 50px;
+  }
+
+  .nav-header-container {
+    width: 40%;
+  }
+
+  body nav {
+    background-color: #4056a1;
+  }
+
+}
+
+
+
 
 
 
