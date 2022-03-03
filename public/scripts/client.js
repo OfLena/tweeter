@@ -18,10 +18,16 @@ const renderTweets = function(tweets) {
 /////////////////************GRAB INFO FROM INDIVDUAL TWEETS FOR RENDER***********/////////////
 const createTweetElement = function(tweet) {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   let $tweet =   $(`
     <article class="single-tweet">
       <header><span><img class="name-icon" src=${tweet.user.avatars}>${tweet.user.name}</span><span>${tweet.user.handle}</span></header>
-      <p class="posted-tweet">${tweet.content.text}</p>
+      <p class="posted-tweet">${escape(tweet.content.text)}</p>
       <footer><span class="footer-text">${timeago.format(tweet.created_at)}</span><span><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></span></span></footer>
     </article>
   `);
