@@ -36,10 +36,6 @@ const createTweetElement = function(tweet) {
 
 //////////////***********GET COUNTER VARIABLE***************//////////////
 
-// $("#tweet-text").on('input', function() {
-//   const counter = $(this).parents(".new-tweet").find(".tweet-text-counter");
-// })
-
 
 
 
@@ -65,19 +61,21 @@ $(document).ready(function() {
     event.preventDefault();
     const counter = $("textarea").val().length
     
-    if (counter > 140) {
-      event.preventDefault;
-      return alert("That is WAYYY Too Many Characters!")
-    } else if (counter === 0) {
-      event.preventDefault;
-      return alert ("Cat got your tongue?")
+    if (counter > 0 && counter < 140) {
+      $('#slide-down-warning').slideUp("slow")
+      return
+     }
+
+    if (counter === 0 || counter > 140) {
+      
+     $('#slide-down-warning').text(`⛔️ Error: Tweet Must Be Between 0 and 140 Characters ⛔️`).slideDown("slow")
+    return
     }
- 
+    
+
     //console.log to make sure that the submit button is being diverted.
     console.log("The Form was submitted");
     const serializedData = $(event.target).serialize();
-    //check to see if the serializedData is correct.
-    console.log(serializedData);
     $.ajax({
       type: "POST",
       url: "/tweets",

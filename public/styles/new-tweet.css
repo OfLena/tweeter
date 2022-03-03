@@ -50,3 +50,18 @@
 .change-tweet-counter {
   color: red;
 }
+
+#slide-down-warning {
+  width      : 90%;
+  height     : 50px;
+  font-size  : 24px;
+  background : #A60000;
+  text-align : center;
+  padding-top: 10px;
+  color: whitesmoke;
+  position   : absolute;
+  border     : 2px solid white;
+  /* left       : calc( 50% - 150px ); */
+  z-index    : 10;
+  display    : none;
+}
