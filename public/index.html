@@ -60,8 +60,8 @@
           <h2>Compose Tweet</h2>
         </div>
         <form action="/tweets/" method="POST" id="new-tweet">
-            <label for="tweet-text" class="humming-about">What are you humming about?</label>
-           <textarea name="text" id="tweet-text"></textarea>
+            <label for="tweet-text" class="humming-about"></label>
+           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="under-tweet-box">
             <button class="tweet-btn" type="submit">Tweet</button>
             <output name="counter" class="tweet-text-counter" for="tweet-text">140</output>
@@ -69,12 +69,8 @@
         </form>
       </section>
       <section class="all-tweets" id="tweet-container">
-        <!-- <article class="single-tweet">
-          <header><span><i class="fa-solid fa-user-astronaut"></i>Beatrix</span><span>@ProfessorBeatrix</span></header>
-          <p class="posted-tweet">This is just a placeholder Tweet!</p>
-          <footer><span class="footer-text">10 Days Ago</span><span><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></span></span></footer>
-        </article> -->
       </section>
     </main>
+    <i id="toTop" class="fa-solid fa-arrow-turn-up"></i>
   </body>
 </html>

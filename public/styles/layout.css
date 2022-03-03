@@ -37,7 +37,6 @@ body {
   width: 90%;
   flex-direction: column;
   padding-top: 20px;
-
 }
 
 .tweet-underline {
@@ -49,10 +48,13 @@ body {
   justify-content: space-between;
 }
 
-
-/* @media only screen and (max-width: 1023px) and (min-width: 768px) {
-
-} */
+#toTop {
+    padding: 5px 5px;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    display: none;
+}
 
 @media only screen and (min-width: 1024px) {
   body {
@@ -72,7 +74,6 @@ body {
   body nav {
     background-color: #4056a1;
   }
-
 }
 
 

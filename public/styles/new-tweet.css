@@ -44,7 +44,6 @@
 
 .tweet-text-counter {
   font-family: 'Bungee', cursive;
-  
 }
 
 .change-tweet-counter {
@@ -54,12 +53,11 @@
 #slide-down-warning {
   width: fit-content;
   font-family: 'Source Sans Pro', sans-serif;
-  height     : 2em;
-  font-size  : 1.5em;
-  background : #A60000;
+  height: 2em;
+  font-size: 1.5em;
+  background: #A60000;
   padding-top: 10px;
   color: whitesmoke;
-  position   : absolute;
-  z-index    : 10;
-  
+  position: absolute;
+  z-index: 10;
 }
