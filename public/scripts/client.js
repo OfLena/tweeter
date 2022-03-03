@@ -9,6 +9,7 @@
 //////////////////**********RENDER TWEETS***********/////////////////////
 
 const renderTweets = function(tweets) {
+  $('#tweet-container').empty()
   for (const tweet of tweets) {
     // console.log(tweet);
     $('#tweet-container').prepend(createTweetElement(tweet));
@@ -39,14 +40,24 @@ const createTweetElement = function(tweet) {
 //////////////***********RENDER TWEETS IN THE DOM***********///////////////
 
 $(document).ready(function() {
+ 
+  loadTweets = function() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json'}).then(data => {
+      renderTweets(data);
+    }).catch(err => {
+      console.log('err', err);
+    });
+  };
 
-
+  loadTweets();
 
   const $form = $("#new-tweet");
   $form.on("submit", (event) => {
     event.preventDefault();
     const counter = $("textarea").val().length
-    console.log(counter)
     
     if (counter > 140) {
       event.preventDefault;
@@ -61,26 +72,17 @@ $(document).ready(function() {
     const serializedData = $(event.target).serialize();
     //check to see if the serializedData is correct.
     console.log(serializedData);
-
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: serializedData,
-      dataType: 'query string'
-    });
+      })
+      .then(() => {
+      loadTweets()
+      })
+      .catch(err => {console.log('err', err)
+    })
   });
-
-  loadTweets = function() {
-    $.ajax({
-      url: '/tweets',
-      method: 'GET',
-      dataType: 'json'}).then(data => {
-      renderTweets(data);
-    }).catch(err => {
-      console.log('err', err);
-    });
-  };
-  loadTweets();
 
   console.log('Testing Document Ready');
 
