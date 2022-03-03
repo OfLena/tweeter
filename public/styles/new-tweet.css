@@ -2,7 +2,7 @@
 .compose-tweet-title {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   font-size: small;
 }
 
@@ -52,16 +52,14 @@
 }
 
 #slide-down-warning {
-  width: inherit;
-  height     : 50px;
-  font-size  : 24px;
+  width: fit-content;
+  font-family: 'Source Sans Pro', sans-serif;
+  height     : 2em;
+  font-size  : 1.5em;
   background : #A60000;
-  text-align : center;
-  justify-content: center;
   padding-top: 10px;
   color: whitesmoke;
   position   : absolute;
-  border     : 2px solid white;
   z-index    : 10;
-  display    : none;
+  
 }
