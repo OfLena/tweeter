@@ -80,6 +80,8 @@ $(document).ready(function() {
       })
       .then(() => {
       loadTweets()
+      $('textarea').val('');
+      $('.tweet-text-counter').val('140');
       })
       .catch(err => {console.log('err', err)
     })
