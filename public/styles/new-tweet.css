@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   font-size: small;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+  background-color: whitesmoke;
 }
 
 .tweet-btn {
@@ -24,6 +26,8 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+  background-color: whitesmoke;
 }
 
 #tweet-text {
@@ -36,6 +40,7 @@
   background-color: whitesmoke;
   font-size: medium;
   padding-top: 15px;
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
 }
 
 .humming-about {
