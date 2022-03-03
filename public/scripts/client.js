@@ -63,11 +63,8 @@ $(document).ready(function() {
     
     if (counter > 0 && counter < 140) {
       $('#slide-down-warning').slideUp("slow")
-      return
      }
-
     if (counter === 0 || counter > 140) {
-      
      $('#slide-down-warning').text(`⛔️ Error: Tweet Must Be Between 0 and 140 Characters ⛔️`).slideDown("slow")
     return
     }

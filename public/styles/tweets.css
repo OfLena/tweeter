@@ -33,6 +33,7 @@ article.single-tweet > header {
   margin-top: 50px;
   margin-bottom: 0px;
   justify-content: center;
+  overflow-wrap: break-word;
 }
 
 .single-tweet {
