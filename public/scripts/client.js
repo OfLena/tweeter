@@ -9,7 +9,6 @@
 const renderTweets = function(tweets) {
   $('#tweet-container').empty();
   for (const tweet of tweets) {
-    // console.log(tweet);
     $('#tweet-container').prepend(createTweetElement(tweet));
   }
 };
@@ -38,6 +37,8 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
  
+//////////////***********AJAX GET**************////////////////////
+
   loadTweets = function() {
     $.ajax({
       url: '/tweets',
@@ -49,7 +50,11 @@ $(document).ready(function() {
     });
   };
 
+/////////////*************CALL LOAD TWEETS**********/////////////////
+
   loadTweets();
+
+//////////////***********HANDLE FORM DATA + COUNTER******//////////
 
   const $form = $("#new-tweet");
   $form.on("submit", (event) => {
@@ -63,10 +68,10 @@ $(document).ready(function() {
       $('#slide-down-warning').text(`⛔️ Error: Tweet Must Be Between 0 and 140 Characters ⛔️`).slideDown("slow");
       return;
     }
-    
-    console.log("The Form was submitted");
-
     const serializedData = $(event.target).serialize();
+    
+//////////////////***********AJAX POST*************///////////////////
+
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -81,6 +86,8 @@ $(document).ready(function() {
         console.log('err', err);
       });
   });
+
+//////////////////************BACK TO TOP FEATURE*********////////////
 
   $(window).scroll(function() {
     if ($(this).scrollTop()) {
