@@ -29,3 +29,11 @@ This repository is the starter code for the project: Students will fork and clon
 - Back to Top of page Button
 - Bouncing Icon in top right corner
 
+##
+
+!["Screenshot of Desktop Front Page"] (https://github.com/OfLena/tweeter/blob/master/docs/desktopFrontPage.png?raw=true)
+!["Screenshot of Desktop Page Bottom"] (https://github.com/OfLena/tweeter/blob/master/docs/desktopPageBottom.png?raw=true)
+!["Screenshot of Desktop Error Message"] (https://github.com/OfLena/tweeter/blob/master/docs/desktopErrorDisplay.png?raw=true)
+!["Screenshot of Mobile Page Top"] (https://github.com/OfLena/tweeter/blob/master/docs/mobilePageTop.png?raw=true)
+!["Screenshot of Mobile Error Message"] (https://github.com/OfLena/tweeter/blob/master/docs/mobileErrorMsg.png?raw=true)
+
