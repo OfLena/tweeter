@@ -16,3 +16,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- md5
+
+## Dev Dependencies
+
+- NodeMon
+
+## Extra Features
+
+- Back to Top of page Button
+- Bouncing Icon in top right corner
+
